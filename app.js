@@ -41,7 +41,7 @@ app.post('/restaurants', (req, res) => {
   const image = req.body.image
   const location = req.body.location
   const phone = req.body.phone
-  const google_map = req.body.goole_map
+  const google_map = req.body.google_map
   const rating = req.body.rating
   const description = req.body.description
   console.log(req.body)
@@ -50,6 +50,7 @@ app.post('/restaurants', (req, res) => {
     name_en,
     category,
     image,
+    location,
     phone,
     google_map,
     rating,
@@ -101,6 +102,22 @@ app.post('/restaurants/:id/edit', (req, res) => {
     })
     .then(restaurant => res.redirect(`/restaurants/${id}`))
     .catch(error => concole.log(error))
+})
+
+app.post('/restaurants/:id/delete', (req, res) => {
+  const id =req.params.id
+  return Restaurant.findById(id)
+    .then(restaurant => restaurant.remove())
+    .then(() => res.redirect('/'))
+    .catch(error => console.log(error))
+})
+
+app.get('/search', (req, res) => {
+  const keyword = req.query.keyword.trim()
+  Restaurant.find({ 'name': { '$regex': keyword, '$options': 'i' } })
+  .lean()
+  .then(restaurants => res.render('index', { restaurants ,keyword }))
+  .catch(error => console.log(error))
 })
 
 app.listen(port, () => {

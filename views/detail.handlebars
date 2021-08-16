@@ -2,8 +2,11 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-10 mx-auto">
-      <div class="d-flex justify-content-end">
-        <a href="./{{ restaurant._id }}/edit" class="btn btn-outline-info">修改</a>
+      <div class="d-flex align-items-center justify-content-end">
+        <a href="./{{ restaurant._id }}/edit" class="btn btn-outline-info mx-3">修改</a>
+        <form action="/restaurants/{{ restaurant._id }}/delete" method="POST" style="display: inline;" onsubmit="return confirm('是否確定刪除 {{restaurant.name}} 餐廳?');">
+          <button class="btn btn-outline-danger mt-3"type="submit">刪除</button>
+        </form>
       </div>
       <p class="mb-1">
         <span class="text-secondary">
