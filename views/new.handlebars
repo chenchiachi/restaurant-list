@@ -1,0 +1,53 @@
+<form action="/restaurants" method="POST">
+  <div class="container mt-3">
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="name" class="text-dark">餐廳名稱</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="" value="{{restaurant.name}}"
+          required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="name_en" class="text-dark">英文名稱</label>
+        <input type="text" class="form-control" name="name_en" id="name_en" placeholder=""
+          value="{{restaurant.name_en}}" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="category" class="text-dark">類別</label>
+        <input type="text" class="form-control" name="category" id="category" placeholder=""
+          value="{{restaurant.category}}" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="phone" class="text-dark">電話</label>
+        <input type="text" class="form-control" name="phone" id="phone" placeholder="" value="{{restaurant.phone}}"
+          required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="location" class="text-dark">地址</label>
+        <input type="text" class="form-control" name="location" id="location" placeholder=""
+          value="{{restaurant.rating}}" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="google_map" class="text-dark">地圖</label>
+        <input type="text" class="form-control" name="google_map" id="google_map" placeholder=""
+          value="{{restaurant.location}}" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="description" class="text-dark">簡介</label>
+        <textarea class="form-control" name="description" id="description" placeholder="" required>{{restaurant.description}}</textarea>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="image" class="text-dark">照片</label>
+        <textarea class="form-control" name="image" id="image" placeholder="" required>{{restaurant.image}}</textarea>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="rating" class="text-dark">評分</label>
+        <input type="text" class="form-control" name="rating" id="rating" placeholder=""
+          value="{{restaurant.rating}}" required>
+      </div>
+      <div class="form-group col-md-6 d-flex align-items-end justify-content-end">
+        <button type="submit" class="btn btn-outline-info">新增</button>
+      </div>
+
+    </div>
+
+</form>
