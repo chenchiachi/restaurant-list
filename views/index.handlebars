@@ -51,9 +51,9 @@
                 </span>
                 <a href="./restaurants/{{ this._id }}" class="btn btn-link">Detail</a>
                 <a href="./restaurants/{{ this._id }}/edit" class="btn btn-link">Edit</a>
-                <form action="./restaurants/{{ this._id }}/delete" method="POST" style="display: inline;"
+                <form action="./restaurants/{{ this._id }}/delete" method="POST" style="display: inline; margin-bottom: 0"
                   onsubmit="return confirm('是否確定刪除 {{this.name}} 餐廳?');">
-                  <button type="submit" class="btn btn-danger">Delete</button>
+                  <button type="submit" class="btn btn-link text-danger">Delete</button>
                 </form>
               </div>
 

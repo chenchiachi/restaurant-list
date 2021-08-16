@@ -3,51 +3,44 @@
     <div class="row">
       <div class="form-group col-md-6">
         <label for="name" class="text-dark">餐廳名稱</label>
-        <input type="text" class="form-control" name="name" id="name" placeholder="" value="{{restaurant.name}}"
-          required>
+        <input type="text" class="form-control" name="name" id="name" required>
       </div>
       <div class="form-group col-md-6">
         <label for="name_en" class="text-dark">英文名稱</label>
-        <input type="text" class="form-control" name="name_en" id="name_en" placeholder=""
-          value="{{restaurant.name_en}}" required>
+        <input type="text" class="form-control" name="name_en" id="name_en"  required>
       </div>
       <div class="form-group col-md-6">
         <label for="category" class="text-dark">類別</label>
-        <input type="text" class="form-control" name="category" id="category" placeholder=""
-          value="{{restaurant.category}}" required>
+        <input type="text" class="form-control" name="category" id="category" required>
       </div>
       <div class="form-group col-md-6">
         <label for="phone" class="text-dark">電話</label>
-        <input type="text" class="form-control" name="phone" id="phone" placeholder="" value="{{restaurant.phone}}"
-          required>
+        <input type="text" class="form-control" name="phone" id="phone" required>
       </div>
       <div class="form-group col-md-6">
         <label for="location" class="text-dark">地址</label>
-        <input type="text" class="form-control" name="location" id="location" placeholder=""
-          value="{{restaurant.rating}}" required>
+        <input type="text" class="form-control" name="location" id="location" required>
       </div>
       <div class="form-group col-md-6">
         <label for="google_map" class="text-dark">地圖</label>
-        <input type="text" class="form-control" name="google_map" id="google_map" placeholder=""
-          value="{{restaurant.location}}" required>
+        <input type="text" class="form-control" name="google_map" id="google_map" required>
       </div>
       <div class="form-group col-md-6">
         <label for="description" class="text-dark">簡介</label>
-        <textarea class="form-control" name="description" id="description" placeholder="" required>{{restaurant.description}}</textarea>
+        <textarea class="form-control" name="description" id="description" required></textarea>
       </div>
       <div class="form-group col-md-6">
         <label for="image" class="text-dark">照片</label>
-        <textarea class="form-control" name="image" id="image" placeholder="" required>{{restaurant.image}}</textarea>
+        <textarea class="form-control" name="image" id="image" required></textarea>
       </div>
       <div class="form-group col-md-6">
         <label for="rating" class="text-dark">評分</label>
-        <input type="text" class="form-control" name="rating" id="rating" placeholder=""
-          value="{{restaurant.rating}}" required>
+        <input type="number" min="0.0" max="5.0" step="0.1" class="form-control" name="rating" id="rating" required>
       </div>
       <div class="form-group col-md-6 d-flex align-items-end justify-content-end">
-        <button type="submit" class="btn btn-outline-info">新增</button>
+        <button type="submit" class="btn btn-outline-info mx-3">新增</button>
+        <a href="/" class="btn btn-outline-danger">取消</a>
       </div>
-
     </div>
-
+  </div>
 </form>
