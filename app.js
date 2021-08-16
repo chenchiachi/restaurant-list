@@ -17,8 +17,12 @@ db.once('open', () => {
   console.log('mongodb connected!') // 連線成功
 })
 
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.set('view engine', 'handlebars')
+
+
 app.get('/', (req, res) => {
-  res.send('this is restaurant list project')
+  res.render('index')
 })
 
 
