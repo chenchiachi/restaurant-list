@@ -1,14 +1,8 @@
-const mongoose = require('mongoose')
+
 const Restaurant = require('../restaurant')
 const restaurantJson = require('../../restaurant.json')
 
-mongoose.connect('mongodb://localhost/restaurant_list', { useNewUrlParser: true, useUnifiedTopology: true })
-
-const db = mongoose.connection
-
-db.on('error', () => {
-  console.log('mongodb error!')
-})
+const db = require('../../config/mongoose')
 
 const restaurantList = restaurantJson.results.map(restaurant => {
   return {
@@ -23,8 +17,6 @@ const restaurantList = restaurantJson.results.map(restaurant => {
     description: restaurant.description
   }
 })
-
-
 
 db.once('open', () => {
   restaurantList.forEach(restaurant => {
