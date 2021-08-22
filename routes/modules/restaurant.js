@@ -73,7 +73,7 @@ router.put('/:id', (req, res) => {
       return restaurant.save()
     })
     .then(restaurant => res.redirect(`/restaurants/${id}`))
-    .catch(error => concole.log(error))
+    .catch(error => console.log(error))
 })
 
 router.delete('/:id', (req, res) => {
