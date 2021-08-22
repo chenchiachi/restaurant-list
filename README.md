@@ -13,6 +13,8 @@
 
 - 使用者可以刪除一家餐廳
 
+- 使用者可以設定餐廳排序
+
 
 ## 安裝
 - git clone  此專案
@@ -20,8 +22,8 @@
 https://github.com/chenchiachi/restaurant_list.git
 ```
 - cd 至專案資料夾
-- 安裝npm 套件
-- 使用npm開啟程式
+- 安裝 npm 套件
+- 使用 npm 開啟程式
 
 ## 版本
 - npm: 6.4.1
@@ -29,3 +31,4 @@ https://github.com/chenchiachi/restaurant_list.git
 - express-handlebars: 5.3.3
 - Bootstrap: 4.2.1
 - mongoose: 5.13.7
+- method-override: 3.0.0
