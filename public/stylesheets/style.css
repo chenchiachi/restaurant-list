@@ -20,7 +20,7 @@ header {
   filter: blur(3px);
 }
 
-.search-bar .search-bar-outer, .login-card {
+.search-bar .search-bar-outer, .login-card, .register-card {
   margin: 0 auto;
   max-width: 680px;
   background-color: #fce2cf;
@@ -78,11 +78,8 @@ header {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.login-card {
-  margin-top: -150px;
-}
-
-.login-card h1, .login-card label, .login-card p{
+.login-card ,.register-card {
+  margin-top: -210px;
   color: #9b4b4b;
 }
 
