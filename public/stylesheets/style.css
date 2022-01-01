@@ -20,7 +20,7 @@ header {
   filter: blur(3px);
 }
 
-.search-bar .search-bar-outer {
+.search-bar .search-bar-outer, .login-card {
   margin: 0 auto;
   max-width: 680px;
   background-color: #fce2cf;
@@ -76,6 +76,14 @@ header {
   text-align: center;
   font-size: 3rem;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-card {
+  margin-top: -150px;
+}
+
+.login-card h1, .login-card label, .login-card p{
+  color: #9b4b4b;
 }
 
 @media screen and (max-width: 992px) {
