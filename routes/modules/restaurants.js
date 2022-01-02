@@ -44,6 +44,7 @@ router.get('/:id/edit', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
+  const _id = req.params.id
   const userId = req.user._id
   const { name, name_en, category, image, location, phone, google_map, rating, description } = req.body
   return Restaurant.findOne({ _id, userId })
