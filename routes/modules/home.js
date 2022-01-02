@@ -3,6 +3,7 @@ const router = express.Router()
 const Restaurant = require('../../models/restaurant')
 
 router.get('/', (req, res) => {
+  const userId = req.user._id
   const sorting = req.query.sorting
   let sortRule = {}
   const keyword = (req.query.keyword || '')
@@ -28,7 +29,7 @@ router.get('/', (req, res) => {
     sortRule = { _id: 'asc' }
 }
 
-Restaurant.find(searchRule)
+  Restaurant.find({ userId, ...searchRule })
   .lean()
   .sort(sortRule)
   .then(restaurants => res.render('index', { restaurants,  keyword }))
